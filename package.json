@@ -1,0 +1,52 @@
+{
+  "name": "api-rest-template",
+  "version": "1.0.0",
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "description": "template de api rest con login preinstalado",
+  "main": "/config/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "flow-remove-types src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^9.0.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.1",
+    "connect-multiparty": "^2.0.0",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "express": "^4.15.4",
+    "flow-typed": "^2.5.1",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.12",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-createdat-updatedat": "^1.1.0",
+    "mongoose-pagination": "^1.0.0",
+    "mongoose-sequence": "^4.0.0",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.4",
+    "save-dev": "^2.0.0",
+    "serve-favicon": "^2.4.4"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.81.0",
+    "flow-remove-types": "^1.2.3"
+  }
+}

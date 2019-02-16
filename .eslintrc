@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "rules": {
+    "flowtype/space-after-type-colon": 0,
+    "class-methods-use-this": "warn",
+    "no-multi-str": "off",
+    "key-spacing":  ["error", { "mode": "minimum" }],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-console": "off",
+    "max-len" : ["error", { "code" : 160 }],
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_conditions"], "allowAfterThis": true }]
+  }
+}
