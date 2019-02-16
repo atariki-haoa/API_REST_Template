@@ -6,9 +6,10 @@ const mongoose = require('mongoose');
 const app = require('./app');
 // var port = process.env.port || 3977
 const port = 3977;
-
+const username = '';
+const password = '';
 // conectando a base de datos, donde si no conecta expulsa el mensaje de error en consola.
-mongoose.connect('mongodb://localhost:27017/app_bares', { auth: { authdb: 'admin' } }, (err) => {
+mongoose.connect(`mongodb://${username}:${password}@localhost:27017/local`, (err) => {
   // este es un callback "(err, res)" cuando conecta a la base de datos"
   if (err) {
     throw err;

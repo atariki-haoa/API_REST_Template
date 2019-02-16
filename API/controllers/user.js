@@ -60,7 +60,7 @@ function updateQuery(req, res) {
 function loginUser(req, res) {
   const params = req.body;
   const pass = params.password;
-  User.findOne({ name: params.name }, (err, user) => {
+  User.findOne({ name: params.username }, (err, user) => {
     if (err) {
       res.status(500).send({ message: 'Error en la peticion' });
     } else if (!user) {
@@ -73,8 +73,9 @@ function loginUser(req, res) {
           // Devolver datos del usuario logeado
           if (params.gethash) {
             // devolver un token de jwt si tiene la propiedad gethash
+            user.password = '';
             res.status(200).send({
-              token: jwt.createToken(user),
+              user, token: jwt.createToken(user),
             });
           } else {
             res.status(200).send({ user });
